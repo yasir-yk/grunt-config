@@ -1,0 +1,461 @@
+{
+	"copyright": "\n********************************************\n* S2W, Inc. *\n********************************************\n",
+	"updateMenu": [
+		{
+			"question": "Select action:",
+			"caption": "Continue project",
+			"value": "project_continue",
+			"run": [
+				{ "matchValue": "npm install", "fsNotExist": "markup/node_modules" },
+				"grunt"
+			]
+		},
+		{
+			"caption": "Update project modules",
+			"value": "project_update",
+			"run": ["npm update"]
+		},
+		{
+			"caption": "Release project (ready for QA)",
+			"value": "project_dist",
+			"run": ["grunt dist"]
+		}
+	],
+	"createMenu": [
+		{
+			"question": "Select project type:",
+			"caption": "Markup Only",
+			"value": "markup_only",
+			"menu": [
+				{
+					"question": "Select framework:",
+					"caption": "No framework",
+					"value": "no_framework",
+					"menu": [
+						{
+							"question": "Select HTML Preprocessor:",
+							"caption": "HTML",
+							"value": "HTML"
+						},
+						{
+							"caption": "HAML",
+							"value": "HAML"
+						},
+						{
+							"caption": "PUG(JADE)",
+							"value": "PUG"
+						}
+					]
+				},
+				{
+					"caption": "Bootstrap",
+					"value": "bootstrap",
+					"menu": [
+						{
+							"question": "Select version:",
+							"caption": "Bootstrap 3",
+							"value": "bootstrap_3",
+							"menu": [
+								{
+									"question": "Select CSS Preprocessor:",
+									"caption": "SCSS",
+									"value": "SCSS"
+								}
+							]
+						},
+						{
+							"caption": "Bootstrap 4",
+							"value": "bootstrap_4",
+							"menu": [
+								{
+									"question": "Select CSS Preprocessor:",
+									"caption": "SCSS",
+									"value": "SCSS"
+								}
+							]
+						}
+					]
+				},
+				{
+					"caption": "Zurb Foundation",
+					"value": "zurb_foundation",
+					"menu": [
+						{
+							"question": "Select version:",
+							"caption": "Zurb Foundation 6.4.3",
+							"value": "foundation_6_4_3"
+						}
+					]
+				},
+				{
+					"caption": "Materialize",
+					"value": "materialize"
+				}
+			]
+		},
+		{
+			"caption": "Markup + CMS",
+			"value": "markup_cms",
+			"menu": [
+				{
+					"question": "Select CMS:",
+					"caption": "WordPress",
+					"value": "wp",
+					"menu": [
+						{
+							"question": "Select framework:",
+							"caption": "No framework",
+							"value": "no_framework",
+							"menu": [
+								{
+									"question": "Select HTML Preprocessor:",
+									"caption": "HTML",
+									"value": "HTML"
+								},
+								{
+									"caption": "HAML",
+									"value": "HAML"
+								},
+								{
+									"caption": "PUG(JADE)",
+									"value": "PUG"
+								}
+							]
+						},
+						{
+							"caption": "Gutenberg",
+							"value": "gutenberg"
+						},
+						{
+							"caption": "Bootstrap",
+							"value": "bootstrap",
+							"menu": [
+								{
+									"question": "Select version:",
+									"caption": "Bootstrap 3",
+									"value": "bootstrap_3",
+									"menu": [
+										{
+											"question": "Select CSS Preprocessor:",
+											"caption": "SCSS",
+											"value": "SCSS"
+										}
+									]
+								},
+								{
+									"caption": "Bootstrap 4",
+									"value": "bootstrap_4",
+									"menu": [
+										{
+											"question": "Select CSS Preprocessor:",
+											"caption": "SCSS",
+											"value": "SCSS"
+										}
+									]
+								}
+							]
+						},
+						{
+							"caption": "Zurb Foundation",
+							"value": "zurb_foundation",
+							"menu": [
+								{
+									"question": "Select version:",
+									"caption": "Zurb Foundation 6.4.3",
+									"value": "foundation_6_4_3"
+								}
+							]
+						},
+						{
+							"caption": "Materialize",
+							"value": "materialize"
+						}
+					]
+				},
+				{
+					"caption": "Magento",
+					"value": "magento"
+				},
+				{
+					"caption": "Other CMS",
+					"value": "other_cms",
+					"menu": [
+						{
+							"question": "Select framework:",
+							"caption": "No framework",
+							"value": "no_framework",
+							"menu": [
+								{
+									"question": "Select HTML Preprocessor:",
+									"caption": "HTML",
+									"value": "HTML"
+								},
+								{
+									"caption": "HAML",
+									"value": "HAML"
+								},
+								{
+									"caption": "PUG(JADE)",
+									"value": "PUG"
+								}
+							]
+						},
+						{
+							"caption": "Bootstrap",
+							"value": "bootstrap",
+							"menu": [
+								{
+									"question": "Select version:",
+									"caption": "Bootstrap 3",
+									"value": "bootstrap_3",
+									"menu": [
+										{
+											"question": "Select CSS Preprocessor:",
+											"caption": "SCSS",
+											"value": "SCSS"
+										}
+									]
+								},
+								{
+									"caption": "Bootstrap 4",
+									"value": "bootstrap_4",
+									"menu": [
+										{
+											"question": "Select CSS Preprocessor:",
+											"caption": "SCSS",
+											"value": "SCSS"
+										}
+									]
+								}
+							]
+						},
+						{
+							"caption": "Zurb Foundation",
+							"value": "zurb_foundation",
+							"menu": [
+								{
+									"question": "Select version:",
+									"caption": "Zurb Foundation 6.4.3",
+									"value": "foundation_6_4_3"
+								}
+							]
+						},
+						{
+							"caption": "Materialize",
+							"value": "materialize"
+						}
+					]
+				}
+			]
+		},
+		{
+			"caption": "Html5 Banner",
+			"value": "banners",
+			"menu": [
+				{
+					"question": "Select version:",
+					"caption": "HTML5 banner",
+					"value": "banner"
+				},
+				{
+					"caption": "HTML5 banner with reload button",
+					"value": "banner_vs-btn"
+				}
+			]
+		}
+	],
+	"data": {
+		"path": "markup",
+		"source": [
+			{ "matchValue": "http://gitlab.p2h.com:8443/iMarkup/grunt-base-template.git", "excludeIf": ["all"] },
+
+			{ "matchValue": "http://gitlab.p2h.com:8443/iMarkup/CMS/grunt-add-cms.git", "dependenciesAll": ["other_cms"] },
+
+			{ "matchValue": "http://gitlab.p2h.com:8443/iMarkup/CMS/grunt-add-cms.git", "dependenciesAll": ["wp"] },
+			{ "matchValue": "http://gitlab.p2h.com:8443/iMarkup/CMS/grunt-add-wp.git", "dependenciesAll": ["wp"] },
+
+			{ "matchValue": "http://gitlab.p2h.com:8443/iMarkup/CMS/grunt-add-gutenberg.git", "dependenciesAny": ["gutenberg"] },
+
+			{ "matchValue": "http://gitlab.p2h.com:8443/iMarkup/Bootstrap/bootstrap_3.git", "dependenciesAny": ["bootstrap_3"] },
+			{ "matchValue": "http://gitlab.p2h.com:8443/iMarkup/Bootstrap/bootstrap_4.git", "dependenciesAny": ["bootstrap_4"] },
+
+
+			{ "matchValue": "http://gitlab.p2h.com:8443/iMarkup/HTML_Preprocessor/PUG.git", "dependenciesAll": ["PUG"]},
+			{ "matchValue": "http://gitlab.p2h.com:8443/iMarkup/HTML_Preprocessor/HAML.git", "dependenciesAll": ["HAML"]},
+
+			{ "matchValue": "http://gitlab.p2h.com:8443/iMarkup/Zurb/foundation_6_4_3.git", "dependenciesAll": ["foundation_6_4_3"] },
+			
+			{ "matchValue": "http://gitlab.p2h.com:8443/iMarkup/grunt-add-materialize.git", "dependenciesAll": ["materialize"] },
+			{ "matchValue": "http://gitlab.p2h.com:8443/iMarkup/CMS/grunt-add-magento-19.git", "dependenciesAll": ["magento"] },
+
+			{ "matchValue": "http://gitlab.p2h.com:8443/iMarkup/BannerHtml5/Html5Banner.git", "dependenciesAll": ["banner"]},
+			{ "matchValue": "http://gitlab.p2h.com:8443/iMarkup/BannerHtml5/Html5_Banner_reload_button.git", "dependenciesAll": ["banner_vs-btn"]}
+		],
+		"ignore": [
+			{ "matchValue": "scss/main.scss", "dependenciesAny": ["magento"] },
+			{ "matchValue": "scss/main.scss", "dependenciesAny": ["wp"] },
+
+			{ "matchValue": "scss/main.scss", "dependenciesAny": ["foundation_6_4_3"] },
+			{ "matchValue": "scss/style.scss", "dependenciesAny": ["foundation_6_4_3"] },
+
+			{ "matchValue": " grunt-settings.js", "dependenciesAll": ["wp", "bootstrap_4"] },
+
+			{ "matchValue": "scss/base/_wp-reset.scss", "dependenciesAny": ["materialize"] },
+			{ "matchValue": "scss/base/_wp-reset.scss", "dependenciesAny": ["bootstrap_4"] },
+			{ "matchValue": "scss/base/_wp-reset.scss", "dependenciesAny": ["bootstrap_3"] },
+			{ "matchValue": "scss/base/_wp-reset.scss", "dependenciesAny": ["foundation_6_4_3"] },
+
+			{ "matchValue": "scss/base/_normalize.scss", "dependenciesAny": ["materialize"] },
+			{ "matchValue": "scss/base/_normalize.scss", "dependenciesAny": ["bootstrap_4"] },
+			{ "matchValue": "scss/base/_normalize.scss", "dependenciesAny": ["bootstrap_3"] },
+			{ "matchValue": "scss/base/_normalize.scss", "dependenciesAny": ["foundation_6_4_3"] },
+
+			{ "matchValue": "scss/base/_forms.scss", "dependenciesAny": ["materialize"] },
+			{ "matchValue": "scss/base/_forms.scss", "dependenciesAny": ["bootstrap_4"] },
+			{ "matchValue": "scss/base/_forms.scss", "dependenciesAny": ["bootstrap_3"] },
+			{ "matchValue": "scss/base/_forms.scss", "dependenciesAny": ["foundation_6_4_3"] },
+
+			{ "matchValue": "scss/base/_functions.scss", "dependenciesAny": ["materialize"] },
+			{ "matchValue": "scss/base/_functions.scss", "dependenciesAny": ["foundation_6_4_3"] },
+
+			{ "matchValue": "scss/base/_typography.scss", "dependenciesAny": ["materialize"] },
+			{ "matchValue": "scss/base/_typography.scss", "dependenciesAny": ["bootstrap_4"] },
+			{ "matchValue": "scss/base/_typography.scss", "dependenciesAny": ["bootstrap_3"] },
+			{ "matchValue": "scss/base/_typography.scss", "dependenciesAny": ["foundation_6_4_3"] },
+
+			{ "matchValue": "scss/base/_cms-reset.scss", "dependenciesAny": ["materialize"] },
+			{ "matchValue": "scss/base/_cms-reset.scss", "dependenciesAny": ["bootstrap_4"] },
+			{ "matchValue": "scss/base/_cms-reset.scss", "dependenciesAny": ["bootstrap_3"] },
+			{ "matchValue": "scss/base/_cms-reset.scss", "dependenciesAny": ["foundation_6_4_3"] },
+			{ "matchValue": "scss/base/_reset.scss", "dependenciesAny": ["magento"] },
+
+			{ "matchValue": "scss/base/_variables.scss", "dependenciesAny": ["materialize"] },
+			{ "matchValue": "scss/base/_variables.scss", "dependenciesAny": ["bootstrap_4"] },
+			{ "matchValue": "scss/base/_variables.scss", "dependenciesAny": ["bootstrap_3"] },
+			{ "matchValue": "scss/base/_variables.scss", "dependenciesAny": ["foundation_6_4_3"] },
+			{ "matchValue": "scss/base/_reset.scss", "dependenciesAny": ["magento"] },
+
+			{ "matchValue": "scss/base/_reset.scss", "dependenciesAny": ["materialize"] },
+			{ "matchValue": "scss/base/_reset.scss", "dependenciesAny": ["bootstrap_4"] },
+			{ "matchValue": "scss/base/_reset.scss", "dependenciesAny": ["bootstrap_3"] },
+			{ "matchValue": "scss/base/_reset.scss", "dependenciesAny": ["foundation_6_4_3"] },
+			{ "matchValue": "scss/base/_reset.scss", "dependenciesAny": ["magento"] },
+
+			{ "matchValue": "scss", "dependenciesAll":["LESS", "bootstrap_3" ] },
+			{ "matchValue": "less", "dependenciesAll":["SCSS", "bootstrap_3" ] },
+
+			{ "matchValue": "scss/vendors/_include-media.scss", "dependenciesAny": ["foundation_6_4_3"] },
+			{ "matchValue": "scss/base/_wp-reset-fw.scss", "dependenciesAll": ["foundation_6_4_3"] },
+
+			{ "matchValue": "less/all.less", "dependenciesAll":["LESS", "wp", "bootstrap_3" ] },
+			{ "matchValue": "less/main.less", "dependenciesAll":["LESS", "wp", "bootstrap_3" ] },
+			{ "matchValue": "less/all.less", "dependenciesAll":["LESS", "other_cms", "bootstrap_3" ] },
+			{ "matchValue": "less/main.less", "dependenciesAll":["LESS", "other_cms", "bootstrap_3" ] },
+
+			{ "matchValue": "grunt-settings_less.js", "dependenciesAll":["SCSS", "bootstrap_3" ] },
+			{ "matchValue": "Gruntfile_less.js", "dependenciesAll":["SCSS", "bootstrap_3" ] },
+			{ "matchValue": "package_less.json", "dependenciesAll":["SCSS", "bootstrap_3" ] },
+
+			{ "matchValue": "wp-bootstrap-index.html", "excludeIf": ["wp"] },
+			{ "matchValue": "wp-elements-bootstrap.html", "excludeIf": ["wp"] },
+			{ "matchValue": "wp-materialize-index.html", "excludeIf": ["wp"] },
+			{ "matchValue": "scss/wp-bootstrap-style.scss", "excludeIf": ["wp"] },
+
+			{ "matchValue": "index.html", "dependenciesAll":["bootstrap_3", "wp"] },
+			{ "matchValue": "index.html", "dependenciesAll":["bootstrap_4", "wp"] },
+			{ "matchValue": "index.html", "dependenciesAll":["materialize", "wp"] },
+
+			{ "matchValue": "grunt-settings.js", "dependenciesAll":["materialize", "wp"] },
+
+			{ "matchValue": "scss/app.scss", "dependenciesAll":["foundation_6_4_3", "wp"] },
+			{ "matchValue": "scss/base/_wp-reset-fw.scss", "dependenciesAll":["foundation_6_4_3", "wp"] },
+
+
+			{ "matchValue": "wp-foundation-grunt-settings.js", "excludeIf": ["wp"] },
+
+			{ "matchValue": "wp-foundation-index.html", "excludeIf": ["wp"] },
+
+			{ "matchValue": "wp-materialize-grunt-settings.js", "excludeIf": ["wp"] },
+
+			{ "matchValue": "wp-materialize-index.html", "excludeIf": ["wp"] },
+
+			{ "matchValue": "scss/base/_wp-reset-fw.scss", "excludeIf": ["foundation_6_4_3", "bootstrap_3", "bootstrap_4", "materialize"] },
+
+			{ "matchValue": "scss/base/_wp-reset_ZURB.scss", "dependenciesAll": ["wp"] },
+
+			{ "matchValue": "scss/wp-foundation-app.scss", "excludeIf": ["wp"] },
+
+			{ "matchValue": "scss/wp-materialize-main.scss", "excludeIf": ["wp"] },
+
+			{ "matchValue": "js/*.min.js", "dependenciesAny": ["banner", "banner_vs-btn"] },
+			{ "matchValue": "js/.jscsrc", "dependenciesAny": ["banner", "banner_vs-btn"] },
+			{ "matchValue": "js/.jshintrc", "dependenciesAny": ["banner", "banner_vs-btn"] },
+			{ "matchValue": "scss/base/_forms.scss", "dependenciesAny": ["banner", "banner_vs-btn"] },
+			{ "matchValue": "scss/base/_functions.scss", "dependenciesAny": ["banner", "banner_vs-btn"] },
+			{ "matchValue": "scss/vendors/_include-media.scss", "dependenciesAny": ["banner", "banner_vs-btn"] },
+
+			{ "matchValue": "js", "dependenciesAny": ["banner"] },
+
+			{ "matchValue": "scss/main.scss", "dependenciesAny": ["HAML"] },
+			{ "matchValue": "scss/base/_cms-reset.scss", "dependenciesAny": ["HAML"] },
+			{ "matchValue": "scss/base/_forms.scss", "dependenciesAny": ["HAML"] },
+			{ "matchValue": "scss/base/_functions.scss", "dependenciesAny": ["HAML"] },
+			{ "matchValue": "scss/base/_helpers.scss", "dependenciesAny": ["HAML"] },
+			{ "matchValue": "scss/base/_mixins.scss", "dependenciesAny": ["HAML"] },
+			{ "matchValue": "scss/base/_reset.scss", "dependenciesAny": ["HAML"] },
+			{ "matchValue": "scss/base/_typography.scss", "dependenciesAny": ["HAML"] },
+			{ "matchValue": "scss/base/_variables.scss", "dependenciesAny": ["HAML"] },
+			{ "matchValue": "scss/vendors", "dependenciesAny": ["HAML"] },
+
+			{ "matchValue": "scss/main.scss", "dependenciesAny": ["PUG"] },
+			{ "matchValue": "scss/base/_cms-reset.scs", "dependenciesAny": ["PUG"] },
+			{ "matchValue": "scss/base/_forms.scss", "dependenciesAny": ["PUG"] },
+			{ "matchValue": "scss/base/_functions.scss", "dependenciesAny": ["PUG"] },
+			{ "matchValue": "scss/base/_helpers.scs", "dependenciesAny": ["PUG"] },
+			{ "matchValue": "scss/base/_mixins.scss", "dependenciesAny": ["PUG"] },
+			{ "matchValue": "scss/base/_reset.scss", "dependenciesAny": ["PUG"] },
+			{ "matchValue": "scss/base/_typography.scs", "dependenciesAny": ["PUG"] },
+			{ "matchValue": "scss/base/_variables.scss", "dependenciesAny": ["PUG"] },
+			{ "matchValue": "scss/vendors", "dependenciesAny": ["PUG"] }
+		],
+		"rename": [
+			{ "matchValue": {"scss/wp-bootstrap-style.scss":"scss/style.scss"}, "dependenciesAll": ["wp", "bootstrap_4"] },
+			{ "matchValue": {"scss/wp-bootstrap-style.scss":"scss/style.scss"}, "dependenciesAll": ["wp", "bootstrap_3"] },
+
+			{ "matchValue": {"less/wp-bootstrap-style.less":"scss/style.less"}, "dependenciesAll": ["wp", "LESS", "bootstrap_4"] },
+			{ "matchValue": {"less/wp-bootstrap-style.less":"scss/style.less"}, "dependenciesAll": ["wp", "LESS", "bootstrap_3"] },
+
+			{ "matchValue": {"grunt-settings_less.js":"grunt-settings.js"}, "dependenciesAll": ["LESS", "bootstrap_3"] },
+			{ "matchValue": {"Gruntfile_less.js":"Gruntfile.js"}, "dependenciesAll": ["LESS", "bootstrap_3"] },
+			{ "matchValue": {"package_less.json":"package.json"}, "dependenciesAll": ["LESS", "bootstrap_3"] },
+
+			{ "matchValue": {"wp-bootstrap-index.html":"index.html"}, "dependenciesAll": ["wp", "bootstrap_4"] },
+			{ "matchValue": {"wp-bootstrap-index.html":"index.html"}, "dependenciesAll": ["wp", "bootstrap_3"] },
+
+			{ "matchValue": {"wp-elements-bootstrap.html":"elements-bootstrap.html"}, "dependenciesAll": ["wp", "bootstrap_4"] },
+			{ "matchValue": {"wp-elements-bootstrap.html":"elements-bootstrap.html"}, "dependenciesAll": ["wp", "bootstrap_3"] },
+
+			
+			{ "matchValue": {"wp-foundation-grunt-settings.js":"grunt-settings.js"}, "dependenciesAll": ["wp", "foundation_6_4_3"] },
+
+			{ "matchValue": {"scss/base/_wp-reset_ZURB.scss":"scss/base/_wp-reset.scss"}, "dependenciesAll": ["wp", "foundation_6_4_3"] },
+			
+			{ "matchValue": {"wp-foundation-index.html":"index.html"}, "dependenciesAll": ["wp", "foundation_6_4_3"] },
+			
+			{ "matchValue": {"scss/base/_wp-reset-fw.scss":"scss/base/_wp-reset.scss"}, "dependenciesAny": ["bootstrap_3", "bootstrap_4", "materialize"] },
+
+			{ "matchValue": {"scss/wp-foundation-app.scss":"scss/app.scss"}, "dependenciesAll": ["wp", "foundation_6_4_3"] },
+			
+			{ "matchValue": {"scss/wp-materialize-main.scss":"scss/style.scss"}, "dependenciesAll": ["wp", "materialize"] },
+			
+			{ "matchValue": {"wp-materialize-index.html":"index.html"}, "dependenciesAll": ["wp", "materialize"] },
+			
+			{ "matchValue": {"wp-materialize-grunt-settings.js":"grunt-settings.js"}, "dependenciesAll": ["wp", "materialize"] }
+		],
+		"run": [
+			{ "matchValue": "bower install", "dependenciesAny": ["foundation_6_4_3", "materialize"] },
+			{ "matchValue": "npm install" },
+			{ "matchValue": "grunt" }
+		]
+	}
+}
