@@ -267,7 +267,7 @@
 	"data": {
 		"path": "markup",
 		"source": [
-			{ "matchValue": "http://gitlab.p2h.com:8443/iMarkup/grunt-base-template.git", "excludeIf": ["all"] },
+			{ "matchValue": "http://gitlab.p2h.com:8443/iMarkup/2grunt-base-template.git", "excludeIf": ["all"] },
 
 			{ "matchValue": "http://gitlab.p2h.com:8443/iMarkup/CMS/grunt-add-cms.git", "dependenciesAll": ["other_cms"] },
 
